@@ -2,6 +2,12 @@
 
 A React hook for the React Native Dimensions API.
 
+[![package](https://img.shields.io/github/package-json/v/CharlesStover/use-dimensions.svg)](https://github.com/CharlesStover/use-dimensions/)
+[![build](https://travis-ci.com/CharlesStover/use-dimensions.svg)](https://travis-ci.com/CharlesStover/use-dimensions/)
+[![downloads](https://img.shields.io/npm/dt/use-dimensions.svg)](https://www.npmjs.com/package/use-dimensions)
+[![minified size](https://img.shields.io/bundlephobia/min/use-dimensions.svg)](https://www.npmjs.com/package/use-dimensions)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/use-dimensions.svg)](https://www.npmjs.com/package/use-dimensions)
+
 ## Install
 
 * `npm install use-dimensions --save`, or
