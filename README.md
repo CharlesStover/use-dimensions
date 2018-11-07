@@ -1,2 +1,49 @@
 # use-dimensions
+
 A React hook for the React Native Dimensions API.
+
+## Install
+
+* `npm install use-dimensions --save`, or
+* `yarn add use-dimensions`
+
+## Use
+
+### Screen and Window Dimensions
+
+To get both screen and window dimensions, use the default export.
+
+```JavaScript
+import useDimensions from 'use-dimensions';
+
+const MyComponent = () => {
+  const { screen, window } = useDimensions();
+  return <Text>{screen.width}x{screen.height} inside {window.width}x{window.height}</Text>;
+}
+```
+
+### Screen Dimensions Only
+
+To get the screen dimensions only, use the `useScreenDimensions` export.
+
+```JavaScript
+import { useScreenDimensions } from 'use-dimensions';
+
+const MyComponent = () => {
+  const { height, width } = useScreenDimensions();
+  return <Text>{width}x{height}</Text>;
+}
+```
+
+### Window Dimensions Only
+
+To get the window dimensions only, use the `useWindowDimensions` export.
+
+```JavaScript
+import { useWindowDimensions } from 'use-dimensions';
+
+const MyComponent = () => {
+  const { height, width } = useWindowDimensions();
+  return <Text>{width}x{height}</Text>;
+}
+```

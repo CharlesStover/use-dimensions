@@ -1,0 +1,6 @@
+.gitignore
+.npmignore
+.travis.yml
+tsconfig.json
+use-dimensions.ts
+yarn.lock
