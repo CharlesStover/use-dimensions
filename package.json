@@ -1,15 +1,27 @@
 {
   "name": "use-dimensions",
-  "version": "1.0.0",
-  "author": "Charles Stover <npmjs@charlesstover.com>",
+  "version": "1.0.1",
+  "author": "Charles Stover <use-dimensions@charlesstover.com>",
+  "bugs": {
+    "email" : "use-dimensions@charlesstover.com",
+    "url": "https://github.com/CharlesStover/use-dimensions/issues"
+  },
   "description": "A React hook for the React Native Dimensions API.",
+  "files": [
+    "package.json",
+    "use-dimensions.d.ts",
+    "use-dimensions.js"
+  ],
+  "homepage": "https://github.com/CharlesStover/use-dimensions#readme",
   "license": "MIT",
-  "main": "index.js",
-  "repository": "https://github.com/CharlesStover/use-dimensions.git",
+  "main": "use-dimensions.js",
+  "repository": "github:CharlesStover/use-dimensions",
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "tsc"
   },
+  "types": "./use-dimensions.d.ts",
+  "dependencies": { },
   "devDependencies": {
     "typescript": "^3.1.6"
   },
