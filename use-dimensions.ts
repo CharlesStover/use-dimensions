@@ -28,7 +28,7 @@ const getDimensions = (type: Type, getDimensions: Getter): Dimensions => {
     (): Unsubscribe => {
 
       // Event listener for when the dimensions change.
-      const handleDimensionsChange = (window: Dimensions, screen: Dimensions): void => {
+      const handleDimensionsChange = ({window, screen}: BothDimensions): void => {
         const newDimensions: Dimensions = getDimensions(window, screen);
         if (
           dimensions.height !== newDimensions.height ||
