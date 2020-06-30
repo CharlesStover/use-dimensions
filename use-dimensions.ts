@@ -44,7 +44,7 @@ const getDimensions = (type: Type, getDimensions: Getter): Dimensions => {
         RNDimensions.removeEventListener('change', handleDimensionsChange);
       };
     },
-    [ RNDimensions ]
+    [ RNDimensions, dimensions ]
   );
   return dimensions;
 };
