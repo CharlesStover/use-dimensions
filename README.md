@@ -1,4 +1,4 @@
-# useDimensions [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=React%20Native's%20Dimensions%20API%20is%20now%20accessible%20with%20Hooks!&url=https://github.com/CharlesStover/use-dimensions&via=CharlesStover&hashtags=react,reactjs,reactnative,javascript,typescript,webdev,webdevelopment)
+# useDimensions
 
 A React hook for the React Native Dimensions API.
 
@@ -6,7 +6,6 @@ A React hook for the React Native Dimensions API.
 [![minified size](https://img.shields.io/bundlephobia/min/use-dimensions.svg)](https://www.npmjs.com/package/use-dimensions)
 [![minzipped size](https://img.shields.io/bundlephobia/minzip/use-dimensions.svg)](https://www.npmjs.com/package/use-dimensions)
 [![downloads](https://img.shields.io/npm/dt/use-dimensions.svg)](https://www.npmjs.com/package/use-dimensions)
-[![build](https://travis-ci.com/CharlesStover/use-dimensions.svg)](https://travis-ci.com/CharlesStover/use-dimensions/)
 
 ## Install
 
@@ -53,9 +52,3 @@ const MyComponent = () => {
   return <Text>{width}x{height}</Text>;
 }
 ```
-
-## Sponsor 💗
-
-If you are a fan of this project, you may
-[become a sponsor](https://github.com/sponsors/CharlesStover)
-via GitHub's Sponsors Program.
