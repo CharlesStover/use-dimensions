@@ -34,29 +34,29 @@ jobs:
       - name: Lint
         run: yarn packages/use-dimensions run eslint
 
-  jest:
-    name: Jest
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          cache: yarn
-          check-latest: true
-          node-version: 'lts/*'
-      - name: Install dependencies
-        run: yarn install --immutable
-      - name: Unit test
-        run: yarn packages/use-dimensions run jest
-      - name: Upload coverage
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: use-dimensions--jest--coverage
-          path: packages/use-dimensions/jest/coverage
+  # jest:
+  #   name: Jest
+  #   needs: install
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
+  #     - name: Setup Node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         cache: yarn
+  #         check-latest: true
+  #         node-version: 'lts/*'
+  #     - name: Install dependencies
+  #       run: yarn install --immutable
+  #     - name: Unit test
+  #       run: yarn packages/use-dimensions run jest
+  #     - name: Upload coverage
+  #       if: ${{ always() }}
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         name: use-dimensions--jest--coverage
+  #         path: packages/use-dimensions/jest/coverage
 
   rollup:
     name: Rollup
@@ -84,7 +84,7 @@ jobs:
   github-packages:
     name: GitHub Packages
     if: ${{ github.event_name == 'push' }}
-    needs: [eslint, jest, rollup]
+    needs: [eslint, rollup] # , jest
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -117,7 +117,7 @@ jobs:
   npm:
     name: NPM
     if: ${{ github.event_name == 'push' }}
-    needs: [eslint, jest, rollup]
+    needs: [eslint, rollup] # , jest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
