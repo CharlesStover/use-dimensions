@@ -1,0 +1,15 @@
+{
+  "extends": "@monorepo-template/tsconfig/react-module.json",
+
+  "compilerOptions": {
+    "declarationDir": "./dist/types"
+  },
+
+  "exclude": [
+    "dist/",
+    "jest/",
+    "node_modules/",
+    "src/**/*.test.ts",
+    "src/test/**/*.ts"
+  ]
+}
