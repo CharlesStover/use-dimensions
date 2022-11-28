@@ -1,32 +1,47 @@
 {
-  "name": "use-dimensions",
-  "version": "1.0.3",
+  "name": "@charlesstover/use-dimensions",
+  "version": "0.0.1",
   "author": "Charles Stover <use-dimensions@charlesstover.com>",
-  "bugs": {
-    "email" : "use-dimensions@charlesstover.com",
-    "url": "https://github.com/CharlesStover/use-dimensions/issues"
-  },
-  "description": "A React hook for the React Native Dimensions API.",
-  "files": [
-    "package.json",
-    "use-dimensions.d.ts",
-    "use-dimensions.js"
-  ],
   "homepage": "https://github.com/CharlesStover/use-dimensions#readme",
   "license": "MIT",
-  "main": "use-dimensions.js",
+  "packageManager": "yarn@3.3.0",
+  "private": true,
   "repository": "github:CharlesStover/use-dimensions",
+  "type": "module",
+  "bugs": {
+    "email": "use-dimensions@charlesstover.com",
+    "url": "https://github.com/CharlesStover/use-dimensions/issues"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/CharlesStover"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "tsc"
+    "browserslist:update-db": "browserslist --update-db",
+    "eslint": "eslint '**/*'",
+    "eslint:fix": "eslint '**/*' --fix",
+    "test": "monorepo-template-test",
+    "up": "yarn up \"*\" \"@*/*\" && yarn up -R \"*\" \"@*/*\""
   },
-  "types": "./use-dimensions.d.ts",
-  "dependencies": { },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "typescript": "^3.1.6"
-  },
-  "peerDependencies": {
-    "react": "^16.7.0",
-    "react-native": "^0.0.0"
+    "@monorepo-template/eslint-config": "^1.0.3",
+    "@monorepo-template/test": "^2.2.0",
+    "@monorepo-template/tsconfig": "^1.1.2",
+    "@types/node": "^18.7.23",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@yarnpkg/sdks": "^3.0.0-rc.22",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "prettier": "^2.7.1",
+    "typescript": "~4.7.0"
   }
 }
